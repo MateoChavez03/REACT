@@ -5,9 +5,9 @@ import ItemListContainer from './containers/ItemListContainer';
 
 const App = () => {
   return (
-    <div className="bg-dark">
+    <div>
       <NavBar />
-      <ItemListContainer greeting="¡Hello World!" />
+      <ItemListContainer />
     </div>
   );
 }
