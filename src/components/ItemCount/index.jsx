@@ -22,11 +22,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
     
     return (
         <ButtonGroup aria-label="Basic example" size='lg'>
-            <Button variant="dark"> <IoIosInformationCircleOutline size={30}/> </Button>
-            <Button variant="dark" onClick={handleDecrement} disabled={count === initial}> <IoIosRemoveCircleOutline size={30}/> </Button>
-            <Button variant="dark"> {count} </Button>
-            <Button variant="dark"  onClick={handleAdd} disabled={count === stock}> <IoIosAddCircleOutline size={30}/> </Button>
-            <Button variant="dark" onClick={() => onAdd(count)}> <BsMinecart size={30}/></Button>
+            <Button variant="light"> <IoIosInformationCircleOutline size={25} /> </Button>
+            <Button variant="light" onClick={handleDecrement} disabled={count === initial}> <IoIosRemoveCircleOutline size={25} /> </Button>
+            <Button variant="light"> {count} </Button>
+            <Button variant="light"  onClick={handleAdd} disabled={count === stock}> <IoIosAddCircleOutline size={25} /> </Button>
+            <Button variant="light" onClick={() => onAdd(count)}> <BsMinecart size={25} /></Button>
         </ButtonGroup>
     )
 }

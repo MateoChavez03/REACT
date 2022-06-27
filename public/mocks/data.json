@@ -1,0 +1,14 @@
+[
+    {"id": 1, "name": "Horizon Forbidden West", "stock": 7, "price": 2600, "console": "Play Station 5", "img": "/assets/img/horizon_portada.jpg"},
+    {"id": 2, "name": "Halo Infinite", "stock": 10, "price": 3000, "console": "Xbox Series", "img": "/assets/img/halo_portada.jpg"},
+    {"id": 3, "name": "Hogwarts Legacy", "stock": 2, "price": 2000, "console": "Xbox Series", "img": "/assets/img/hogwarts_portada.jpg"},
+    {"id": 4, "name": "Uncharted 4", "stock": 4, "price": 1500, "console": "Play Station 5", "img": "/assets/img/uncharted_portada.jpg"},
+    {"id": 5, "name": "The Last of Us 2", "stock": 7, "price": 4000, "console": "Play Station 5", "img": "/assets/img/last_portada.jpg"},
+    {"id": 6, "name": "Gears 5", "stock": 8, "price": 2100, "console": "Xbox Series", "img": "/assets/img/gears_portada.jpg"},
+    {"id": 7, "name": "God of War", "stock": 12, "price": 4000, "console": "Play Station 5", "img": "/assets/img/gow_portada.jpg"},
+    {"id": 8, "name": "Unravel 2", "stock": 1, "price": 2100, "console": "Xbox Series", "img": "/assets/img/unravel_portada.jpg"},
+    {"id": 9, "name": "Spider-Man: Miles Morales", "stock": 5, "price": 2600, "console": "Play Station 5", "img": "/assets/img/spiderman_portada.jpg"},
+    {"id": 10, "name": "Ratchet & Clank: Rift Apart", "stock": 2, "price": 4000, "console": "Play Station 5", "img": "/assets/img/ratchet_portada.jpg"},
+    {"id": 11, "name": "State of Decay 2", "stock": 4, "price": 2000, "console": "Xbox Series", "img": "/assets/img/state_portada.jpg"},
+    {"id": 12, "name": "Sea of Thieves", "stock": 9, "price": 3000, "console": "Xbox Series", "img": "/assets/img/sea_portada.jpg"}
+]
