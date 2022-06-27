@@ -4,8 +4,8 @@ import Item from '../Item';
 const ItemList = ({products}) => {
     return (
         <div className='d-flex row justify-content-around'>
-            {products.map(producto => {
-                return <Item product={producto} key={producto.id}/>
+            {products.map(game => {
+                return <Item product={game} key={game.id}/>
             })}
         </div>
     )

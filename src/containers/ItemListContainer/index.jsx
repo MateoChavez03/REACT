@@ -4,28 +4,28 @@ import ItemList from '../../components/ItemList';
 
 const ItemListContainer = () => {
 
-    const [productos, setProductos] = useState(null)
+    const [products, setProducts] = useState(null)
 
     useEffect(() => {
 
-      const getProductos = async () => {
+      const getProducts = async () => {
         try {
           const response = await fetch('/mocks/data.json');
           const data = await response.json();
-          setProductos(data);
+          setProducts(data);
         } catch (error) {
           console.log(error);
         }
       }
 
-      getProductos();
+      getProducts();
 
       }, [])
 
     return (
       <div className='bg-black text-center d-flex'>
-        {productos ?
-          <ItemList products={productos} />
+        {products ?
+          <ItemList products={products} />
           :
           null
         }
