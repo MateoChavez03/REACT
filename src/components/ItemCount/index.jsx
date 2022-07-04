@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
@@ -8,24 +9,26 @@ import { IoIosAddCircleOutline } from 'react-icons/io'
 import { IoIosRemoveCircleOutline } from 'react-icons/io'
 import { BsMinecart } from 'react-icons/bs';
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd, game}) => {
 
-    let [count, setCount] = useState(initial);
+    const [count, setCount] = useState(initial);
+    const navigate = useNavigate()
 
-    const handleAdd = () => {
-        count < stock && setCount(count + 1);
+
+    const addProduct = (num) => {
+        setCount(count + num);
     }
 
-    const handleDecrement = () => {
-        count > initial && setCount(count - 1);
+    const navigateDetail = () => {
+        navigate(`/detail/${game.id}`)
     }
     
     return (
         <ButtonGroup aria-label="Basic example" size='lg'>
-            <Button variant="light"> <IoIosInformationCircleOutline size={25} /> </Button>
-            <Button variant="light" onClick={handleDecrement} disabled={count === initial}> <IoIosRemoveCircleOutline size={25} /> </Button>
+            <Button variant="light" onClick={navigateDetail}> <IoIosInformationCircleOutline size={25} /> </Button>
+            <Button variant="light" onClick={() => {addProduct(-1)}} disabled={count === initial ? true : null}> <IoIosRemoveCircleOutline size={25} /> </Button>
             <Button variant="light"> {count} </Button>
-            <Button variant="light"  onClick={handleAdd} disabled={count === stock}> <IoIosAddCircleOutline size={25} /> </Button>
+            <Button variant="light" onClick={() => {addProduct(1)}} disabled={count === stock ? true : null}> <IoIosAddCircleOutline size={25} /> </Button>
             <Button variant="light" onClick={() => onAdd(count)}> <BsMinecart size={25} /></Button>
         </ButtonGroup>
     )

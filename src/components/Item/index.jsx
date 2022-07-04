@@ -7,7 +7,7 @@ import { ListGroupItem } from 'react-bootstrap';
 
 import Swal from 'sweetalert2';
 
-const Item = ({product}) => {
+const Item = ({product, size}) => {
 
     const onAdd = (count) => {
         count === 1 ?
@@ -47,7 +47,7 @@ const Item = ({product}) => {
     }
 
     return (
-        <Card border='light' id={product.id} bg={"black"} text={"light"} style={{ width: '28rem'}} className={"fs-5 m-5"}>
+        <Card border='light' id={product.id} bg={"black"} text={"light"} style={{ width: size}} className={"fs-5 m-4 max-vw-100"}>
             <Card.Img variant="top" src={product.img} />
             <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
@@ -57,7 +57,7 @@ const Item = ({product}) => {
                 <ListGroupItem className='bg-black text-white'>Console: {product.console}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-                <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>
+                <ItemCount stock={product.stock} initial={1} onAdd={onAdd} game={product}/>
             </Card.Body>
         </Card>
     )

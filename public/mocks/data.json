@@ -1,14 +1,14 @@
 [
-    {"id": 1, "name": "Horizon Forbidden West", "stock": 7, "price": 2600, "console": "Play Station 5", "img": "/assets/img/horizon_portada.jpg"},
-    {"id": 2, "name": "Halo Infinite", "stock": 10, "price": 3000, "console": "Xbox Series", "img": "/assets/img/halo_portada.jpg"},
-    {"id": 3, "name": "Hogwarts Legacy", "stock": 2, "price": 2000, "console": "Xbox Series", "img": "/assets/img/hogwarts_portada.jpg"},
-    {"id": 4, "name": "Uncharted 4", "stock": 4, "price": 1500, "console": "Play Station 5", "img": "/assets/img/uncharted_portada.jpg"},
-    {"id": 5, "name": "The Last of Us 2", "stock": 7, "price": 4000, "console": "Play Station 5", "img": "/assets/img/last_portada.jpg"},
-    {"id": 6, "name": "Gears 5", "stock": 8, "price": 2100, "console": "Xbox Series", "img": "/assets/img/gears_portada.jpg"},
-    {"id": 7, "name": "God of War", "stock": 12, "price": 4000, "console": "Play Station 5", "img": "/assets/img/gow_portada.jpg"},
-    {"id": 8, "name": "Unravel 2", "stock": 1, "price": 2100, "console": "Xbox Series", "img": "/assets/img/unravel_portada.jpg"},
-    {"id": 9, "name": "Spider-Man: Miles Morales", "stock": 5, "price": 2600, "console": "Play Station 5", "img": "/assets/img/spiderman_portada.jpg"},
-    {"id": 10, "name": "Ratchet & Clank: Rift Apart", "stock": 2, "price": 4000, "console": "Play Station 5", "img": "/assets/img/ratchet_portada.jpg"},
-    {"id": 11, "name": "State of Decay 2", "stock": 4, "price": 2000, "console": "Xbox Series", "img": "/assets/img/state_portada.jpg"},
-    {"id": 12, "name": "Sea of Thieves", "stock": 9, "price": 3000, "console": "Xbox Series", "img": "/assets/img/sea_portada.jpg"}
+    {"id": 1, "name": "Horizon Forbidden West", "stock": 7, "price": 2600, "console": "Play Station 5", "img": "/assets/img/horizon_portada.jpg", "info": "Horizon Forbidden West is a 2022 action role-playing game developed by Guerrilla Games and published by Sony Interactive Entertainment."},
+    {"id": 2, "name": "Halo Infinite", "stock": 10, "price": 3000, "console": "Xbox Series", "img": "/assets/img/halo_portada.jpg", "info": "Halo Infinite is a 2021 first-person shooter game developed by 343 Industries and published by Xbox Game Studios."},
+    {"id": 3, "name": "Hogwarts Legacy", "stock": 2, "price": 2000, "console": "Xbox Series", "img": "/assets/img/hogwarts_portada.jpg", "info":"Hogwarts Legacy is an upcoming action role-playing video game, developed by Avalanche Software and published by Warner Bros. Interactive Entertainment under its Portkey Games label, using the Unreal Engine."},
+    {"id": 4, "name": "Uncharted 4: A Thief's End", "stock": 4, "price": 1500, "console": "Play Station 5", "img": "/assets/img/uncharted_portada.jpg", "info":"Uncharted 4: A Thief's End is a 2016 action-adventure game developed by Naughty Dog and published by Sony Computer Entertainment."},
+    {"id": 5, "name": "The Last of Us Part II", "stock": 7, "price": 4000, "console": "Play Station 5", "img": "/assets/img/last_portada.jpg", "info":"The Last of Us Part II is a 2020 action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment for the PlayStation 5."},
+    {"id": 6, "name": "Gears 5", "stock": 8, "price": 2100, "console": "Xbox Series", "img": "/assets/img/gears_portada.jpg", "info":"Gears 5 is a 2019 third-person shooter video game developed by The Coalition and published by Xbox Game Studios for Xbox One, Microsoft Windows and Xbox Series X/S."},
+    {"id": 7, "name": "God of War", "stock": 12, "price": 4000, "console": "Play Station 5", "img": "/assets/img/gow_portada.jpg", "info":"God of War is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment."},
+    {"id": 8, "name": "Unravel 2", "stock": 1, "price": 2100, "console": "Xbox Series", "img": "/assets/img/unravel_portada.jpg", "info":"Unravel Two is a puzzle-platform game developed by Swedish studio Coldwood Interactive and published by Electronic Arts."},
+    {"id": 9, "name": "Spider-Man: Miles Morales", "stock": 5, "price": 2600, "console": "Play Station 5", "img": "/assets/img/spiderman_portada.jpg", "info":"Marvel's Spider-Man: Miles Morales is a 2020 action-adventure game developed by Insomniac Games and published by Sony Interactive Entertainment."},
+    {"id": 10, "name": "Ratchet & Clank: Rift Apart", "stock": 2, "price": 4000, "console": "Play Station 5", "img": "/assets/img/ratchet_portada.jpg", "info":"Ratchet & Clank: Rift Apart is a 2021 third-person shooter platform game developed by Insomniac Games and published by Sony Interactive Entertainment for the PlayStation 5."},
+    {"id": 11, "name": "State of Decay 2", "stock": 4, "price": 2000, "console": "Xbox Series", "img": "/assets/img/state_portada.jpg", "info":"State of Decay 2 is a survival video game developed by Undead Labs and published by Xbox Game Studios."},
+    {"id": 12, "name": "Sea of Thieves", "stock": 9, "price": 3000, "console": "Xbox Series", "img": "/assets/img/sea_portada.jpg", "info":"Sea of Thieves is a 2018 action-adventure game developed by Rare and published by Microsoft Studios."}
 ]

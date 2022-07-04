@@ -1,22 +1,25 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget';
+
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import CartWidget from '../CartWidget';
 
 const NavBar = () => {
   return (
+
     <Navbar collapseOnSelect expand="md" bg="black" variant="dark">
         <Container>
-            <Navbar.Brand href="#home" className="fs-4"> GAMR </Navbar.Brand>
+            <Navbar.Brand> <NavLink to='/' className={"navbar-brand text-white fs-4"}> GAMR </NavLink></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="me-auto">
-                    <NavDropdown title="Filter" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#filter/PS5">Play Station 5</NavDropdown.Item>
+                    <NavDropdown menuVariant='dark' title="Filter" id="collasible-nav-dropdown">
+                        <NavLink to='/category/Play Station 5' variant='dark' className={"nav-link text-white text-center dropdown-item"}> Play Station 5 </NavLink>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#filter/XS">Xbox Series</NavDropdown.Item>
+                        <NavLink to='/category/Xbox Series' className={"nav-link text-white text-center dropdown-item"}> Xbox Series </NavLink>
                     </NavDropdown>
                 </Nav>
                 <Nav>
