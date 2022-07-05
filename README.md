@@ -23,7 +23,7 @@ ___
 * Método para acceder al detalle de los productos a partir del ID de cada videojuego.
 * Método para agregar más de una copia de cada videojuego, dependiendo del stock disponible.
 
-**Imágenes de la navegación en la página**
+**Imágenes de la navegación en la página**  
 **Página principal**
 ![Home page](/assets/imgReadme/home.png)
 **Navegación por categoria**
