@@ -5,14 +5,14 @@ import { Button } from 'react-bootstrap';
 import { ButtonGroup } from 'react-bootstrap';
 
 import { IoIosInformationCircleOutline } from 'react-icons/io';
-import { IoIosAddCircleOutline } from 'react-icons/io'
-import { IoIosRemoveCircleOutline } from 'react-icons/io'
+import { IoIosAddCircleOutline } from 'react-icons/io';
+import { IoIosRemoveCircleOutline } from 'react-icons/io';
 import { BsMinecart } from 'react-icons/bs';
 
 const ItemCount = ({stock, initial, onAdd, game}) => {
 
     const [count, setCount] = useState(initial);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
 
     const addProduct = (num) => {
@@ -20,7 +20,7 @@ const ItemCount = ({stock, initial, onAdd, game}) => {
     }
 
     const navigateDetail = () => {
-        navigate(`/detail/${game.id}`)
+        navigate(`/detail/${game.id}`);
     }
     
     return (
