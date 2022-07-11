@@ -24,7 +24,7 @@ const ItemCount = ({stock, initial, onAdd, game}) => {
     }
     
     return (
-        <ButtonGroup aria-label="Basic example" size='lg'>
+        <ButtonGroup size='lg'>
             <Button variant="light" onClick={navigateDetail}> <IoIosInformationCircleOutline size={25} /> </Button>
             <Button variant="light" onClick={() => {addProduct(-1)}} disabled={count === initial ? true : null}> <IoIosRemoveCircleOutline size={25} /> </Button>
             <Button variant="light"> {count} </Button>

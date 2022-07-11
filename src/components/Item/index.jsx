@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ItemCount from '../ItemCount';
+import { useNavigate } from 'react-router-dom';
 
-import { Card } from 'react-bootstrap';
+import { Button, ButtonGroup, Card } from 'react-bootstrap';
 import { ListGroup } from 'react-bootstrap';
 import { ListGroupItem } from 'react-bootstrap';
 
 import Swal from 'sweetalert2';
 
-const Item = ({product, size}) => {
+const Item = ({product, size, inDetail}) => {
+
+    const [qtyAdded, setQtyAdded] = useState(0);
+
+    const navigate = useNavigate();
+
+    const toCart = () => {
+        navigate("/cart");
+    }
+
+    const toHome = () => {
+        navigate("/");
+    }
 
     const onAdd = (count) => {
+
+        setQtyAdded(count);
+
         count === 1 ?
         Swal.fire({
           position: 'bottom',
@@ -57,7 +73,17 @@ const Item = ({product, size}) => {
                 <ListGroupItem className='bg-black text-white'>Console: {product.console}</ListGroupItem>
             </ListGroup>
             <Card.Body>
-                <ItemCount stock={product.stock} initial={1} onAdd={onAdd} game={product}/>
+                {inDetail ?
+                      !qtyAdded ?
+                          <ItemCount stock={product.stock} initial={1} onAdd={onAdd} game={product}/>
+                      :
+                          <ButtonGroup size='lg'>
+                            <Button variant='light' onClick={toCart}> Go to cart </Button>
+                            <Button variant='light' onClick={toHome}> Back Home </Button>
+                          </ButtonGroup>
+                :
+                    <ItemCount stock={product.stock} initial={1} onAdd={onAdd} game={product}/>
+                }
             </Card.Body>
         </Card>
     )

@@ -23,7 +23,7 @@ const NavBar = () => {
                     </NavDropdown>
                 </Nav>
                 <Nav>
-                    <Nav.Link href="#cart"> <CartWidget size={32}/> </Nav.Link>
+                    <NavLink to="/cart" className={"nav-link"}> <CartWidget size={32}/> </NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Container>

@@ -5,7 +5,7 @@ const ItemDetail = ({gameDetail}) => {
 
     return (
         <div className='d-flex flex-wrap justify-content-evenly'>
-            <Item product={gameDetail} size={"40rem"}/>
+            <Item product={gameDetail} size={"40rem"} inDetail={true}/>
             <div className='mt-3 text-white text-center'>
               <h2>{gameDetail.name}</h2>
               <p className='fs-4 mt-4'>Console: {gameDetail.console}</p>
