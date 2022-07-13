@@ -4,10 +4,11 @@ import ItemList from '../../components/ItemList';
 
 const ItemListContainer = () => {
 
-    const [products, setProducts] = useState([]);
+    const [products, setProducts] = useState();
     const { categoryId } = useParams();
 
     useEffect(() => {
+      
       const getProducts = async ( ) => {
         try {
             const response = await fetch('/mocks/data.json');
@@ -22,7 +23,7 @@ const ItemListContainer = () => {
             console.log(error)
         }        
       }
-      
+
       getProducts();
       
     }, [categoryId])
@@ -32,8 +33,8 @@ const ItemListContainer = () => {
         {products ?
           <ItemList products={products} />
           :
-          <div class="spinner-grow text-light" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-light" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         }
       </div>

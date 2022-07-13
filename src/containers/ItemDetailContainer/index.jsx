@@ -4,23 +4,24 @@ import ItemDetail from '../../components/ItemDetail';
 
 const ItemDetailContainer = () => {
 
-    const [productDetail, setProductDetail] = useState({});
+    const [productDetail, setProductDetail] = useState();
     const { productId } = useParams();
 
     useEffect (() => {
+
       const getProductDetail = async () => {
         try {
             const response = await fetch('/mocks/data.json');
             const data = await response.json();
-            const filtrado = data.find(el => el.id.toString() === productId);
-            setProductDetail(filtrado);
+            const filter = data.find(el => el.id.toString() === productId);
+            setProductDetail(filter);
         } catch (error) {
             console.log(error);
         }
       }
-
+      
       getProductDetail();
-
+      
     }, [productId]);
 
     return (
@@ -28,8 +29,8 @@ const ItemDetailContainer = () => {
         {productDetail ?
           <ItemDetail gameDetail={productDetail} />
           :
-          <div class="spinner-grow text-light" role="status">
-            <span class="visually-hidden">Loading...</span>
+          <div className="spinner-grow text-light" role="status">
+            <span className="visually-hidden">Loading...</span>
           </div>
         }
       </div>

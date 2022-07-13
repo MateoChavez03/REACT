@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import { Button } from 'react-bootstrap';
-import { ButtonGroup } from 'react-bootstrap';
+import { Button, ButtonGroup } from 'react-bootstrap';
 
-import { IoIosInformationCircleOutline } from 'react-icons/io';
-import { IoIosAddCircleOutline } from 'react-icons/io';
-import { IoIosRemoveCircleOutline } from 'react-icons/io';
+import { IoIosInformationCircleOutline, IoIosAddCircleOutline, IoIosRemoveCircleOutline } from 'react-icons/io';
 import { BsMinecart } from 'react-icons/bs';
 
 const ItemCount = ({stock, initial, onAdd, game}) => {

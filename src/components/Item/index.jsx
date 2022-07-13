@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import ItemCount from '../ItemCount';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
+import ItemCount from '../ItemCount';
+import { Cart } from '../../context/CartContext';
 
-import { Button, ButtonGroup, Card } from 'react-bootstrap';
-import { ListGroup } from 'react-bootstrap';
-import { ListGroupItem } from 'react-bootstrap';
-
+import { Button, ButtonGroup, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import Swal from 'sweetalert2';
 
 const Item = ({product, size, inDetail}) => {
 
     const [qtyAdded, setQtyAdded] = useState(0);
-
     const navigate = useNavigate();
+    const {addProduct} = useContext(Cart);
 
     const toCart = () => {
         navigate("/cart");
@@ -25,6 +23,7 @@ const Item = ({product, size, inDetail}) => {
     const onAdd = (count) => {
 
         setQtyAdded(count);
+        addProduct(product, count);
 
         count === 1 ?
         Swal.fire({
