@@ -10,23 +10,23 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 const AppRouter = () => {
-  return (
-    <BrowserRouter >
-        <Container fluid>
-            <Row>
-                <NavBar />
-            </Row>
-            <Row>
-                <Routes>
-                    <Route path='/' element={<ItemListContainer/>}> </Route>
-                    <Route path='/category/:categoryId' element={<ItemListContainer/>}> </Route>
-                    <Route path='/detail/:productId' element={<ItemDetailContainer/>}> </Route>
-                    <Route path='/cart' element={<Cart/>}> </Route> 
-                </Routes>
-            </Row>
-        </Container>
-    </BrowserRouter>
-  )
+    return (
+        <BrowserRouter >
+            <Container fluid>
+                <Row>
+                    <NavBar />
+                </Row>
+                <Row>
+                    <Routes>
+                        <Route path='/' element={<ItemListContainer />}> </Route>
+                        <Route path='/category/:categoryId' element={<ItemListContainer />}> </Route>
+                        <Route path='/detail/:productId' element={<ItemDetailContainer />}> </Route>
+                        <Route path='/cart' element={<Cart />}> </Route>
+                    </Routes>
+                </Row>
+            </Container>
+        </BrowserRouter>
+    )
 }
 
 export default AppRouter

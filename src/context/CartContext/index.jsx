@@ -2,8 +2,8 @@ import React, { createContext, useState } from 'react';
 
 export const Cart = createContext();
 
-const CartProvider = ({children}) => {
-    
+const CartProvider = ({ children }) => {
+
     const [cart, setCart] = useState([]);
 
     const addProduct = (product, qty) => {
@@ -15,10 +15,10 @@ const CartProvider = ({children}) => {
             productInCart.quantity = Math.min(productInCart.quantity, productInCart.stock);
             setCart([...cart]);
         } else {
-            setCart([...cart, {...product, quantity: qty}]);
+            setCart([...cart, { ...product, quantity: qty }]);
         }
     }
-    
+
     const isInCart = (product) => {
         return cart.find(game => game.id === product.id)
     }
@@ -33,7 +33,7 @@ const CartProvider = ({children}) => {
     }
 
     return (
-        <Cart.Provider value={{cart, setCart, addProduct, clearCart, removeProduct}}>
+        <Cart.Provider value={{ cart, setCart, addProduct, clearCart, removeProduct }}>
             {children}
         </Cart.Provider>
     )
