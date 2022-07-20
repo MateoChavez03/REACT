@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
 
+import { collection, query, getDocs } from "firebase/firestore";
+import { db } from '../../firebase/config';
+
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState();
@@ -11,13 +14,18 @@ const ItemListContainer = () => {
 
     const getProducts = async () => {
       try {
-        const response = await fetch('/mocks/data.json');
-        const data = await response.json();
+        const q = query(collection(db, "products"));
+        const querySnapshot = await getDocs(q);
+        const products = []
+        querySnapshot.forEach((doc) => {
+          products.push({ id: doc.id, ...doc.data() })
+        });
+
         if (categoryId) {
-          const filter = data.filter(el => el.console === categoryId);
+          const filter = products.filter(el => el.console === categoryId);
           setProducts(filter);
         } else {
-          setProducts(data);
+          setProducts(products);
         }
       } catch (error) {
         console.log(error)
