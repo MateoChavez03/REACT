@@ -4,7 +4,7 @@ import ItemCount from '../ItemCount';
 import { Cart } from '../../context/CartContext';
 
 import { Button, ButtonGroup, Card, ListGroup, ListGroupItem } from 'react-bootstrap';
-import Swal from 'sweetalert2';
+import alerts from '../../helpers/alerts';
 
 const Item = ({ product, size, inDetail }) => {
 
@@ -21,44 +21,9 @@ const Item = ({ product, size, inDetail }) => {
   }
 
   const onAdd = (count) => {
-
     setQtyAdded(count);
     addProduct(product, count);
-
-    count === 1 ?
-      Swal.fire({
-        position: 'bottom',
-        width: '32rem',
-        title: `${count} copy of ${product.name} added to cart`,
-        showConfirmButton: false,
-        timer: 1500,
-        showClass: {
-          popup: 'animate__animated animate__fadeInUp'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutDown'
-        },
-        customClass: {
-          title: 'fs-6 m-0'
-        }
-      })
-      :
-      Swal.fire({
-        position: 'bottom',
-        width: '32rem',
-        title: `${count} copies of ${product.name} added to cart`,
-        showConfirmButton: false,
-        timer: 1500,
-        showClass: {
-          popup: 'animate__animated animate__fadeInUp'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutDown'
-        },
-        customClass: {
-          title: 'fs-6 m-0'
-        }
-      })
+    alerts(count, product);
   }
 
   return (

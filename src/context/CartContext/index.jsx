@@ -12,7 +12,7 @@ const CartProvider = ({ children }) => {
 
         if (productInCart) {
             productInCart.quantity += qty;
-            productInCart.quantity = Math.min(productInCart.quantity, productInCart.stock);
+
             setCart([...cart]);
         } else {
             setCart([...cart, { ...product, quantity: qty }]);

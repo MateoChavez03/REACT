@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 
@@ -6,11 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
-import { Cart } from '../../context/CartContext';
 
 const NavBar = () => {
-
-    const { cart } = useContext(Cart)
 
     return (
 
@@ -27,7 +24,7 @@ const NavBar = () => {
                         </NavDropdown>
                     </Nav>
                     <Nav>
-                        {cart.length !== 0 && <NavLink to="/cart" className={"nav-link"}> <CartWidget /> </NavLink>}
+                        <NavLink to="/cart" className={"nav-link"}> <CartWidget /> </NavLink>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

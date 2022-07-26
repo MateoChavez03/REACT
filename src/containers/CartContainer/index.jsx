@@ -2,13 +2,21 @@ import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Cart } from '../../context/CartContext';
 
-import { Table, Button } from 'react-bootstrap';
+import { Table, Button} from 'react-bootstrap';
+import CartList from '../../components/CartList';
+import createOrder from '../../helpers/createOrder';
+import saveOrder from '../../helpers/saveOrder';
 
 const CartContainer = () => {
   const navigate = useNavigate()
   const { cart, clearCart, removeProduct } = useContext(Cart);
 
   const totalPrice = cart.reduce((accum, game) => accum + (game.price * game.quantity), 0);
+
+  const confirmOrder = async () => {
+    const order = createOrder("Mateo Chavez", "mateochavez@gmail.com", 1111111, cart, totalPrice);
+    saveOrder(cart, order);
+  }
 
   const goHome = () => {
     navigate("/");
@@ -17,8 +25,8 @@ const CartContainer = () => {
   return (
     cart.length === 0 ?
       <div className='bg-black text-center min-vh-100 text-white d-flex flex-column justify-content-center align-items-center'>
-        <div> EMPTY CART </div>
-        <Button variant='light' onClick={goHome} className="d-block"> BACK HOME </Button>
+        <div className='mt-3'> EMPTY CART </div>
+        <Button variant='light' onClick={goHome} className="d-block mt-3"> BACK HOME </Button>
       </div>
       :
       <div className='bg-black text-center min-vh-100'>
@@ -32,18 +40,10 @@ const CartContainer = () => {
               <th className="d-grid gap-2"><Button variant='dark' className='fw-bold' onClick={clearCart}>CLEAR</Button></th>
             </tr>
           </thead>
-          <tbody>
-            {cart.map(product => {
-              return <tr className='align-middle' key={product.id}>
-                <td>{product.name}</td>
-                <td>{product.quantity}</td>
-                <td>{product.stock}</td>
-                <td>${product.quantity * product.price}</td>
-                <td className="d-grid gap-2"><Button variant='dark' className='bg-transparent border-0' onClick={() => removeProduct(product.id)}>REMOVE</Button></td>
-              </tr>
-            })}
-          </tbody>
+          <CartList cart={cart} onAdd={removeProduct} />
         </Table>
+        <Button variant='light' className='mx-3' onClick={goHome}>Keep buying</Button>
+        <Button variant='light' className='mx-3' onClick={confirmOrder}>Checkout</Button>
       </div>
   )
 }
