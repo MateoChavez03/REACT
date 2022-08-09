@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
 
 import { collection, query, getDocs } from "firebase/firestore";
 import { db } from '../../firebase/config';
 
+
 const ItemListContainer = () => {
 
   const [products, setProducts] = useState();
   const { categoryId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -23,7 +25,11 @@ const ItemListContainer = () => {
 
         if (categoryId) {
           const filter = products.filter(el => el.console === categoryId);
-          setProducts(filter);
+          if (filter.length === 0) {
+            navigate("*")
+          } else {
+            setProducts(filter);
+          }
         } else {
           setProducts(products);
         }
@@ -34,7 +40,7 @@ const ItemListContainer = () => {
 
     getProducts();
 
-  }, [categoryId])
+  }, [categoryId, navigate])
 
   return (
     <div className='bg-black text-center min-vh-100' >

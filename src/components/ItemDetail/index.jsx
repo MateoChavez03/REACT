@@ -10,6 +10,7 @@ const ItemDetail = ({ gameDetail }) => {
                 <h2>{gameDetail.name}</h2>
                 <p className='fs-4 mt-4'>Console: {gameDetail.console}</p>
                 <p className='fs-4 mt-4'>Price: ${gameDetail.price}</p>
+                <p className='fs-4 mt-4'>Stock: {gameDetail.stock}</p>
                 <p className='fs-4 mt-4 px-5'>{gameDetail.info}</p>
             </div>
         </div>

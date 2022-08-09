@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
 
 import { doc, getDoc } from "firebase/firestore";
@@ -9,6 +9,8 @@ const ItemDetailContainer = () => {
 
   const [productDetail, setProductDetail] = useState();
   const { productId } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
 
@@ -21,7 +23,7 @@ const ItemDetailContainer = () => {
           const productDetail = { id: docSnap.id, ...docSnap.data() };
           setProductDetail(productDetail);
         } else {
-          console.log("No such document!");
+          navigate("*");
         }
 
       } catch (error) {
@@ -30,8 +32,7 @@ const ItemDetailContainer = () => {
     }
 
     getProductDetail();
-
-  }, [productId]);
+  }, [productId, navigate]);
 
   return (
     <div className='bg-black text-center min-vh-100'>

@@ -22,14 +22,10 @@ ___
 * Método de filtrado por categoría a partir de la consola a la cual pertenece cada videojuego.
 * Método para acceder al detalle de los productos a partir del ID de cada videojuego.
 * Método para agregar más de una copia de cada videojuego, dependiendo del stock disponible.
+* Método para generar orden de compra.
 
-**Imágenes de la navegación en la página:**  
-* **Página principal:**  
-![Home page](./public/assets/imgReadme/home.png)  
-* **Navegación por categoria:**  
-![Category page](./public/assets/imgReadme/category.png)  
-* **Navegación por ID:**  
-![Detail page](./public/assets/imgReadme/detail.png)
+**Navegación principal de la página:**  
+![Gif](./public/assets/imgReadme/gif_readme.gif)
 
 ___
 
@@ -42,7 +38,9 @@ ___
 * **ANIMATE.CSS** (versión 4.1.1)
 *Era necesario implementarlo para que las animaciones de las alertas se ejecuten correctamente.*
 * **REACT-ICONS** (versión 4.4.0)  
-*Implementé React Icons ya que provee una gran cantidad de iconos de diversas librerías, entre ellos los de Bootstrap e Ionicons, presentes en el proyecto*
+*Implementé React Icons ya que provee una gran cantidad de iconos de diversas librerías, entre ellos los de Bootstrap e Ionicons, presentes en el proyecto.*
+* **FIREBASE**
+*Utilizado como base de datos para almacenar productos y órdenes de compra.*
 
 ___
 

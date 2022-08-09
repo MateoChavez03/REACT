@@ -1,7 +1,7 @@
 import Swal from "sweetalert2";
 
 const alerts = (count, product) => {
-    count === 1 ?
+  count === 1 ?
     Swal.fire({
       position: 'bottom',
       width: '32rem',

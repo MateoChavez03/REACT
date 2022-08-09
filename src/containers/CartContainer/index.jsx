@@ -1,22 +1,16 @@
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Cart } from '../../context/CartContext';
+import PurchaseFormContainer from '../PurchaseFormContainer';
 
-import { Table, Button} from 'react-bootstrap';
+import { Table, Button } from 'react-bootstrap';
 import CartList from '../../components/CartList';
-import createOrder from '../../helpers/createOrder';
-import saveOrder from '../../helpers/saveOrder';
 
 const CartContainer = () => {
   const navigate = useNavigate()
   const { cart, clearCart, removeProduct } = useContext(Cart);
 
   const totalPrice = cart.reduce((accum, game) => accum + (game.price * game.quantity), 0);
-
-  const confirmOrder = async () => {
-    const order = createOrder("Mateo Chavez", "mateochavez@gmail.com", 1111111, cart, totalPrice);
-    saveOrder(cart, order);
-  }
 
   const goHome = () => {
     navigate("/");
@@ -43,7 +37,7 @@ const CartContainer = () => {
           <CartList cart={cart} onAdd={removeProduct} />
         </Table>
         <Button variant='light' className='mx-3' onClick={goHome}>Keep buying</Button>
-        <Button variant='light' className='mx-3' onClick={confirmOrder}>Checkout</Button>
+        <PurchaseFormContainer cart={cart} totalPrice={totalPrice} />
       </div>
   )
 }
