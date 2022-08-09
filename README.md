@@ -39,7 +39,7 @@ ___
 *Era necesario implementarlo para que las animaciones de las alertas se ejecuten correctamente.*
 * **REACT-ICONS** (versión 4.4.0)  
 *Implementé React Icons ya que provee una gran cantidad de iconos de diversas librerías, entre ellos los de Bootstrap e Ionicons, presentes en el proyecto.*
-* **FIREBASE**
+* **FIREBASE**  
 *Utilizado como base de datos para almacenar productos y órdenes de compra.*
 
 ___
