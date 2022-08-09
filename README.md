@@ -16,7 +16,7 @@ ___
 ### INFORMACIÓN DEL PROYECTO ❔
 
 ##### **Simulación de e-commerce de videojuegos**
-**En el presente proyecto se presenta un e-commerce que brinda información sobre videojuegos pertenecientes a Play Station 5 y Xbox Series, y además es posible adquirir copias digitales de los mismos.**  
+**En el proyecto se presenta un e-commerce que brinda información sobre videojuegos pertenecientes a Play Station 5 y Xbox Series, y además es posible adquirir copias digitales de los mismos.**  
 
 **El proyecto presenta las siguientes funcionalidades:**
 * Método de filtrado por categoría a partir de la consola a la cual pertenece cada videojuego.
