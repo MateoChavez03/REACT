@@ -8,9 +8,11 @@ import CartList from '../../components/CartList';
 
 const CartContainer = () => {
   const navigate = useNavigate()
-  const { cart, clearCart, removeProduct } = useContext(Cart);
+  const { cart, clearCart, removeProduct, totalPrice, calculateTotal } = useContext(Cart);
 
-  const totalPrice = cart.reduce((accum, game) => accum + (game.price * game.quantity), 0);
+  setTimeout(() => {
+    calculateTotal();
+  }, 1500);
 
   const goHome = () => {
     navigate("/");

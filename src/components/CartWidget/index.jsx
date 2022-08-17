@@ -6,8 +6,11 @@ import { Cart } from '../../context/CartContext';
 
 const CartWidget = () => {
 
-    const { cart } = useContext(Cart);
-    const inCartProducts = cart.reduce((accum, game) => accum + game.quantity, 0);
+    const { cart, inCartProducts, calculateProducts } = useContext(Cart);
+
+    setTimeout(() => {
+        calculateProducts();
+    }, 1500);
 
     return (
         cart.length === 0 ?

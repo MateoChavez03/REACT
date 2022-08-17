@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import ItemDetail from '../../components/ItemDetail';
+import Swal from 'sweetalert2';
 
 import { doc, getDoc } from "firebase/firestore";
 import { db } from '../../firebase/config';
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
         }
 
       } catch (error) {
-        console.log(error);
+        Swal.fire(`Error: ${error}`);
       }
     }
 

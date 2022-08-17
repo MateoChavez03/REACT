@@ -41,7 +41,7 @@ const saveOrder = (cart, order) => {
                     })
                 })
             }).catch((err) => {
-                console.log(`Error: ${err.message}`);
+                Swal.fire(`Error: ${err.message}`)
             })
         } else {
             let msg = ''
